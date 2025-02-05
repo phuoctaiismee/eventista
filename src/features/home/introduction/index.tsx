@@ -24,8 +24,21 @@ const Introduction = () => {
       />
     </div>
   ));
+
+  const mobileItems = images.map((image, index) => (
+    <CarouselItem key={index} className="basis-1/2">
+      <div className="h-[200px]">
+        <Image
+          src={image}
+          className="w-full h-full"
+          alt="Introduction"
+          loading="lazy"
+        />
+      </div>
+    </CarouselItem>
+  ));
   return (
-    <Bounded className="relative">
+    <Bounded className="relative pb-12 lg:py-0">
       <Image
         src="/images/home/introduction/introduction.jpg"
         className="w-full h-full absolute inset-0 z-[0]"
@@ -36,20 +49,22 @@ const Introduction = () => {
       <ReactLenis root>
         <section className="text-white  w-full bg-slate-950  ">
           <div className="grid grid-cols-5">
-            <div className="sticky top-0 h-screen flex items-center justify-center col-span-3">
-              <div className="flex flex-col items-start justify-center p-16 z-10 gap-6">
-                <h3 className="text-white text-xl uppercase">Introduction</h3>
-                <h1 className="text-white text-5xl font-bold uppercase">
+            <div className="lg:sticky top-0 lg:h-screen flex items-center justify-center col-span-5 lg:col-span-3">
+              <div className="flex flex-col items-start justify-center py-12 lg:p-16 z-10 gap-6">
+                <h3 className="text-white text-[13px] leading-[18px] lg:text-xl uppercase">
+                  Introduction
+                </h3>
+                <h1 className="text-white text-base lg:text-5xl font-bold uppercase">
                   Mister{" "}
                   <span className="bg-gradient-to-r from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent">
                     Tourism
                   </span>{" "}
-                  <br /> World{" "}
+                  <br className="lg:block hidden" /> World{" "}
                   <span className="bg-gradient-to-r from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent">
                     2024
                   </span>
                 </h1>
-                <p className="text-white text-[15px] leading-[21px]">
+                <p className="text-white text-[13px] leading-[18px] lg:text-[15px] lg:leading-[21px] font-montserrat">
                   The 8th edition of Mister Tourism World, scheduled to be held
                   in Vietnam, is expected to attract participants from 35
                   countries around the world, aiming to showcase the rich
@@ -70,8 +85,19 @@ const Introduction = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-2">
-              <div className="flex flex-col">{items}</div>
+            <div className="col-span-5 lg:col-span-2">
+              <div className="lg:block hidden">
+                <div className="flex flex-col">{items}</div>
+              </div>
+              <div className="block lg:hidden p-4 pt-0">
+                <Carousel
+                  opts={{
+                    dragFree: true,
+                  }}
+                >
+                  <CarouselContent>{mobileItems}</CarouselContent>
+                </Carousel>
+              </div>
             </div>
           </div>
         </section>
