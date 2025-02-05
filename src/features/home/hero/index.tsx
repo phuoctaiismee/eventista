@@ -4,7 +4,7 @@ import { Image } from "@/components/common/images";
 const HeroSection = () => {
   return (
     <section className="py-5 md:py-0 lg:min-h-[750px] lg:max-h-[80vh] relative">
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Image
           src="/images/home/hero.png"
           className="w-full h-full"
@@ -16,6 +16,13 @@ const HeroSection = () => {
       <div className="md:hidden">
         <Image
           src="/images/home/hero/hero-mobile.png"
+          className="w-full h-full"
+          alt="Hero image"
+        />
+      </div>
+      <div className="hidden md:block lg:hidden">
+        <Image
+          src="/images/home/hero/hero-tablet.png"
           className="w-full h-full"
           alt="Hero image"
         />

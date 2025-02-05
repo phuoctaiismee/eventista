@@ -2,11 +2,11 @@
 "use client";
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React, {FC, ReactNode, useEffect, useState} from "react";
-import {Bounded} from "../containers";
+import React, { FC, ReactNode, useEffect, useState } from "react";
+import { Bounded } from "../containers";
 import Link from "next/link";
-import {COMMON, Languages, STYLES} from "@/configs";
-import {usePathname} from "next/navigation";
+import { COMMON, Languages, STYLES } from "@/configs";
+import { usePathname } from "next/navigation";
 import {
   Select,
   SelectTrigger,
@@ -14,18 +14,18 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "@/stores";
-import {setLanguages} from "@/stores/features/languages";
-import {cn} from "@/lib/utils";
-import {LegalButton} from "@/components/base-component/buttons/legal-button";
-import {ArrowRight} from "lucide-react";
-import {Icon} from "@iconify/react";
-import {useWindowSize} from "@/hooks/window";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/stores";
+import { setLanguages } from "@/stores/features/languages";
+import { cn } from "@/lib/utils";
+import { LegalButton } from "@/components/base-component/buttons/legal-button";
+import { ArrowRight } from "lucide-react";
+import { Icon } from "@iconify/react";
+import { useWindowSize } from "@/hooks/window";
 
 const Header = () => {
   const pathName = usePathname();
-  const {lang} = useSelector((state: RootState) => state.languagesSlice);
+  const { lang } = useSelector((state: RootState) => state.languagesSlice);
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const [width, height] = useWindowSize();
@@ -38,7 +38,14 @@ const Header = () => {
   }, [width]);
   return (
     <div className="h-[56px] md:h-[76px] lg:h-[88px]  w-full">
-      <div className="w-full px-4 lg:px-[120px] h-full flex items-start md:items-center justify-between bg-[#06112f]">
+      <div className="fixed top-0 left-0 w-full h-[210px] z-0">
+        <img
+          src="/images/header.jpg"
+          alt="image"
+          className="w-full h-full object-cover brightness-[30%]"
+        />
+      </div>
+      <div className="relative w-full px-4 lg:px-[120px] h-full flex items-start md:items-center justify-between lg:bg-[#06112f] z-10">
         <img
           src="/avatars/Avatar=Ava_Brooks.png"
           alt="image"
@@ -136,7 +143,7 @@ type MenuItemProps = {
   label?: string;
   active?: boolean;
 };
-const MenuItem: FC<MenuItemProps> = ({label, to = "##", active}) => {
+const MenuItem: FC<MenuItemProps> = ({ label, to = "##", active }) => {
   return (
     <Link
       href={to}

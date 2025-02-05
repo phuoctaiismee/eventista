@@ -8,7 +8,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div
-      className="w-full min-h-[824px] md:gap-0 pt-6 pb-6 md:pt-12 lg:py-16 px-4 md:px-[48px] lg:px-[120px]"
+      className="z-10 relative w-full min-h-[824px] md:gap-0 pt-6 pb-6 md:pt-12 lg:py-16 px-4 md:px-[48px] lg:px-[120px]"
       style={{
         backgroundImage:
           'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/images/footer.png")',
@@ -35,7 +35,7 @@ const Footer = () => {
             {COMMON.footer.second.describes}
           </span>
         </div>
-        <div className="flex flex-wrap gap-6 lg:pt-12">
+        <div className="flex justify-center flex-wrap gap-6 lg:pt-12 w-full">
           <div className="flex flex-col gap-2">
             <span className="font-semibold text-white text-base md:text-sm lg:text-xl">
               Support
@@ -70,10 +70,10 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap gap-6 lg:pt-12">
+        <div className="flex justify-center flex-wrap gap-6 lg:pt-12 w-full">
           {COMMON.footer.fourth.map((item, index) => (
-            <div key={index} className="flex flex-col gap-2">
-              <span className="font-semibold text-white text-base md:text-sm lg:text-xl">
+            <div key={index} className="flex flex-col gap-2 lg:max-w-[378px]">
+              <span className="font-semibold text-white text-base md:text-sm lg:text-base">
                 {item.name}
               </span>
               <div className="flex flex-col gap-2">
