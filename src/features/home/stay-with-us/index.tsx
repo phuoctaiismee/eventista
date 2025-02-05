@@ -31,7 +31,7 @@ const DATA = [
 
 export const StayWithUs = () => {
   return (
-    <div className="relative w-full flex items-center justify-center py-20">
+    <div className="relative w-full flex items-center justify-center py-20 md:px-4">
       <Image
         src={"/images/home/73192a80f0282f3bcf9c3a134e0ef350.jpg"}
         alt="stay-with-us"
@@ -49,7 +49,7 @@ export const StayWithUs = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8 w-full max-w-[1200px]">
             {DATA?.map((item) => (
               <Card key={item?.id} card={item} />
             ))}

@@ -11,7 +11,7 @@ export const CardSponsor = ({ className, image }: CardSponsorType) => {
   return (
     <div
       className={cn(
-        "bg-white/50 rounded-lg p-4 w-[310px] h-[180px] flex items-center justify-center",
+        "bg-white/50 rounded-lg p-4 w-full h-[180px] flex items-center justify-center",
         className
       )}
     >

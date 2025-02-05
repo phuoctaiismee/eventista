@@ -817,8 +817,8 @@ export const Sponsors = () => {
       </div>
 
       <Bounded className="z-10">
-        <div className="flex flex-col items-center justify-center gap-3">
-          <div className="flex flex-col items-center justify-center gap-3">
+        <div className="flex flex-col w-full items-center justify-center gap-3">
+          <div className="flex flex-col w-full items-center justify-center gap-3">
             {/* <LinearText
               text="Sponsors"
               className="text-5xl font-semibold uppercase"
@@ -843,7 +843,7 @@ export const Sponsors = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 my-8 w-full mx-auto max-w-[965px]">
             {DATA.map((item, index) => (
               <CardSponsor
                 key={item.id}
