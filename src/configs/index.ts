@@ -27,46 +27,46 @@ export const COMMON = {
     },
     {
       name: "About Votings",
-      url: "/about-votings",
+      url: "#",
     },
     {
       name: "News",
-      url: "/news",
+      url: "#",
     },
     {
       name: "Gallery",
-      url: "/gallery",
+      url: "#",
     },
     {
       name: "Sponsor",
-      url: "/sponsor",
+      url: "#",
     },
   ],
   footer: {
     first: [
       {
         name: "Payment Guide",
-        url: "/payment-guide",
+        url: "#",
       },
       {
         name: "Privacy Policy",
-        url: "/privacy-policy",
+        url: "#",
       },
       {
         name: "Terms and conditions",
-        url: "/terms-and-conditions",
+        url: "#",
       },
       {
         name: "Shipping Policy",
-        url: "/shipping-policy",
+        url: "#",
       },
       {
         name: "Return & Refund Policy",
-        url: "/return-refund-policy",
+        url: "#",
       },
       {
         name: "FAQ",
-        url: "/faq",
+        url: "#",
       },
     ],
     second: {
@@ -121,5 +121,10 @@ export const COMMON = {
       },
     ],
     fifth: "@2024 Copyright belongs to Eventista",
+  },
+  meta: {
+    title: "Mister Tourism World",
+    description: "Mister Tourism World",
+    image: "/thumbnail.png",
   },
 };
