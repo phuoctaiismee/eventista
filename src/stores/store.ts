@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {
   persistStore,
   persistReducer,
@@ -11,9 +11,10 @@ import {
 } from "redux-persist";
 import storage from "./ssr-safe-storage";
 
-import { setupListeners } from "@reduxjs/toolkit/query";
-import { UserApi, UserSlice } from "./features/user";
-import { CategoryAPI, CategoriesSlice } from "./features/categories";
+import {setupListeners} from "@reduxjs/toolkit/query";
+import {UserApi, UserSlice} from "./features/user";
+import {CategoryAPI, CategoriesSlice} from "./features/categories";
+import {LanguagesSlice} from "./features/languages";
 
 // CONFIG
 const persistConfig = {
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
 
   userSlice: UserSlice.reducer,
   categoriesSlice: CategoriesSlice.reducer,
+  languagesSlice: LanguagesSlice.reducer,
 });
 
 // Middleware
