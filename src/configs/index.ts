@@ -76,13 +76,13 @@ export const COMMON = {
     third: [
       {
         name: "eCommerce Certified by",
-        ls: ["/logos/subscriber.svg"],
+        ls: ["/logos/subscribe.svg"],
       },
       {
         name: "Connect with us",
         ls: [
           "/logos/socials/facebook.svg",
-          "/logos/social/tiktok.svg",
+          "/logos/socials/tiktok.svg",
           "/logos/socials/linked.svg",
         ],
       },

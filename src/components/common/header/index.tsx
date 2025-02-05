@@ -30,42 +30,42 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const [width, height] = useWindowSize();
   useEffect(() => {
-    if (width < 1200) {
+    if (width < 1440) {
       setShow(false);
     } else {
       setShow(true);
     }
   }, [width]);
   return (
-    <div className="h-[56px] tablet:h-[76px] desktop:h-[88px]  w-full">
-      <div className="w-full tablet:px-4 desktop:px-[120px] h-full flex items-start tablet:items-center justify-between bg-[#06112f]">
+    <div className="h-[56px] md:h-[76px] lg:h-[88px]  w-full">
+      <div className="w-full px-4 lg:px-[120px] h-full flex items-start md:items-center justify-between bg-[#06112f]">
         <img
           src="/avatars/Avatar=Ava_Brooks.png"
           alt="image"
-          className="size-7 aspect-square desktop:hidden"
+          className="size-7 aspect-square lg:hidden"
         />
         <img
           src="/logos/logo.svg"
-          className="w-[45px] tablet:w-[50px] desktop:w-[81px] h-10 tablet:h-[45px] desktop:h-[72px]"
+          className="w-[45px] md:w-[50px] lg:w-[81px] h-10 md:h-[45px] lg:h-[72px]"
         />
         <div className="relative w-fit flex items-center flex-row-reverse">
           <Icon
             icon="material-symbols:drag-handle"
             fontSize={24}
             color="#fff"
-            className="cursor-pointer desktop:hidden"
+            className="cursor-pointer lg:hidden"
             onClick={() => setShow((prev) => !prev)}
           />
           {show && (
             <div
               className={cn(
                 " items-center justify-end gap-[42px] max-w-[711px] w-full transition-all duration-300",
-                width < 1200
+                width < 1440
                   ? "absolute flex flex-col right-0 bg-[#06112f] rounded-lg z-[50] gap-3 h-fit w-fit top-12 p-4 px-[42px]"
                   : "flex flex-row bg-transparent"
               )}
             >
-              <div className="flex items-center desktop:gap-[24] flex-col desktop:flex-row gap-3">
+              <div className="flex items-center lg:gap-[24] flex-col lg:flex-row gap-3">
                 {COMMON.header_menus.map((menu, index) => (
                   <MenuItem
                     key={index}
