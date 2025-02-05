@@ -1,12 +1,9 @@
-import ThemeSchema from "@/components/common/themes/theme-schema";
-import { ModeToggle } from "@/components/common/themes/theme-toggle";
+
+import HomeFeatures from "@/features/home";
 export default function Home() {
-  
   return (
-    <main className="h-screen w-full flex flex-col justify-center items-center">
-     
-      <ModeToggle />
-      <ThemeSchema />
+    <main className="min-h-screen w-full flex flex-col">
+      <HomeFeatures />
     </main>
   );
 }
