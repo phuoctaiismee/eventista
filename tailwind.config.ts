@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
 
 export default {
   darkMode: ["class"],
@@ -13,6 +13,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "gray-primary": "#D4D4D4",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
