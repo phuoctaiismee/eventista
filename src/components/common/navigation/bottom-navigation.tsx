@@ -17,22 +17,22 @@ const menu = [
   },
   {
     title: "Search",
-    href: "/search",
+    href: "#",
     icon: Search,
   },
   {
     title: "Share",
-    href: "/share",
+    href: "#",
     icon: ScreenShare,
   },
   {
     title: "Notification",
-    href: "/notification",
+    href: "#",
     icon: Bell,
   },
   {
     title: "News",
-    href: "/news",
+    href: "#",
     icon: Newspaper,
   },
 ];
@@ -43,7 +43,7 @@ const BottomNavigation = () => {
       <div className="fixed inset-x-0 bottom-0 bg-[#020719] backdrop-blur-lg z-[9999]">
         <div className="pt-3 pb-6 px-6 flex items-center justify-between">
           {menu.map((item) => {
-            const isActive = pathname.startsWith(item?.href);
+            const isActive = pathname === item?.href;
             const Icon = item?.icon;
             if (isActive) {
               return (
