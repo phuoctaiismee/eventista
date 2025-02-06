@@ -70,9 +70,15 @@ export const COMMON = {
       },
     ],
     second: {
+      logo: "/logos/logo-bw.svg",
       describes:
-        "Eventista is a fan engagement platform with a diverse ecosystem of solutions: Online Voting Platform, Ticket Distribution Platform and eCommerce for Merchandise. Eventista is currently a strategic partner of top tier entertainment company in Asia such as Glamanand Supermodel India, Sen Vang Entertainment, Uni Corp, TNA Entertainment,.... becoming an important platform to bring business efficiency outstanding for businesses in the entertainment industry.",
+        "TekNix is a fan engagement platform with a diverse ecosystem of solutions: Online Voting Platform, Ticket Distribution Platform and eCommerce for Merchandise. TekNix is currently a strategic partner of top tier entertainment company in Asia such as Glamanand Supermodel India, Sen Vang Entertainment, Uni Corp, TNA Entertainment,.... becoming an important platform to bring business efficiency outstanding for businesses in the entertainment industry.",
     },
+    support: [
+      "Email: info@teknixcorp.com",
+      "Website: https://www.teknixcorp.com/",
+      "Hotline: (+84) 28 7101 6565",
+    ],
     third: [
       {
         name: "eCommerce Certified by",
@@ -99,25 +105,20 @@ export const COMMON = {
     ],
     fourth: [
       {
-        name: "Eventista Việt Nam",
+        name: "TekNix Headquarter",
         ls: [
-          "1A Trần Thánh Tông, Phường Bạch Đằng, Quận Hai Bà Trưng, Hà Nội Công ty TNHH Eventista.",
-          "GPĐKKD số 0110372057 do Sở KHĐT TP Hà Nội cấp ngày 31/05/2022",
+          "6th Floor Golden House Tower – Sunwah Pearl Building, 90 Nguyen Huu Canh, Ward 22, Binh Thanh District, Ho Chi Minh City, Vietnam",
         ],
       },
       {
-        name: "Eventista Limited Company HongKong",
+        name: "Can Tho Branch",
         ls: [
-          "SUITE C, LEVEL 7, WORLD TRUST TOWER, 50 STANLEY STREET, CENTRAL, HONG KONG",
-          "Business Reg Number: 75914577-000-11-23-7. Shorten BRN: 3338407",
+          "STS Tower, 11B Hoa Binh Street, Ninh Kieu District, Can Tho City.",
         ],
       },
       {
-        name: "Eventista Global Company Limited United KingDom",
-        ls: [
-          "71-75 Shelton Street Covent Garden London, WC2H 9JQ, UNITED KINGDOM",
-          "Business Reg Number: 15533570",
-        ],
+        name: "USA Branch",
+        ls: ["3707 Cypress Creek Parkway Suite 310, Houston, TX 77068"],
       },
     ],
     fifth: "@2024 Copyright belongs to Eventista",

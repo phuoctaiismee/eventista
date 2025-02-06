@@ -108,6 +108,7 @@ export default {
 
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],
+        sf: ["SF Pro Display", "sans-serif"],
       },
     },
   },
