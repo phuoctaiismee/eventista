@@ -37,7 +37,7 @@ const Header = () => {
     }
   }, [width]);
   return (
-    <div className="h-[56px] md:h-[76px] lg:h-[88px]  w-full font-sfprodisplay">
+    <div className="!font-sf h-[56px] md:h-[76px] lg:h-[88px]  w-full font-sfprodisplay">
       <div className="fixed top-0 left-0 w-full h-[210px] z-0">
         <img
           src="/images/header.jpg"
