@@ -5,11 +5,6 @@ import "./globals.css";
 import GlobalRootLayout from "@/layouts/root-layout";
 import { COMMON } from "@/configs";
 
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
-  subsets: ["latin"],
-});
-
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -124,9 +119,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${unbounded.className} ${montserrat.variable} antialiased`}
-      >
+      <body className={`font-sf ${montserrat.variable} antialiased`}>
         <GlobalRootLayout>{children}</GlobalRootLayout>
       </body>
     </html>
