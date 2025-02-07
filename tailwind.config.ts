@@ -1,4 +1,4 @@
-import type {Config} from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
@@ -59,6 +59,7 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        full: "9999px",
       },
       container: {
         center: true,
@@ -109,8 +110,15 @@ export default {
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],
         sf: ["SF Pro Display", "sans-serif"],
+        unbounded: ["var(--font-unbounded)"],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar")({
+      nocompatible: true,
+    }),
+  ],
 } satisfies Config;

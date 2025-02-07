@@ -1,18 +1,21 @@
 import { IGlobalLayoutProps } from "@/types";
 import StoreProvider from "./store-provider";
 import { ThemeProvider } from "./theme-provider";
+import LenisProvider from "./lenis-provider";
 
 export const AppProvider = ({ children }: IGlobalLayoutProps) => {
   return (
     <StoreProvider>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        {children}
-      </ThemeProvider>
+      {/* <LenisProvider> */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      {/* </LenisProvider> */}
     </StoreProvider>
   );
 };

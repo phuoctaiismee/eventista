@@ -42,7 +42,7 @@ export const StayWithUs = () => {
 
       <Bounded className="z-10">
         <div className="flex flex-col items-start justify-start gap-3">
-          <div className="flex flex-col items-start justify-start gap-3">
+          <div className="flex flex-col items-start justify-start gap-3 font-unbounded">
             <div className="text-white text-base md:text-2xl uppercase">Latest news</div>
             <div className="text-white text-xl md:text-5xl font-semibold uppercase">
               Stay <LinearText text="Ahead" /> with Us

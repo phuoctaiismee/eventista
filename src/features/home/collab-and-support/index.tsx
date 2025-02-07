@@ -29,7 +29,7 @@ const CollaborationAndSupport = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-2 z-10">
+      <div className="flex flex-col items-center justify-center gap-2 z-10 font-unbounded">
         <h3 className="text-xl uppercase text-center">
           <span className="text-[15px] md:text-2xl font-medium leading-[24px] md:leading-[38.4px]">
             from our heart
@@ -54,7 +54,7 @@ const CollaborationAndSupport = () => {
         </h1>
         <Button
           variant="ghost"
-          className="uppercase hover:bg-transparent text-[13px] md:text-base"
+          className="uppercase hover:bg-transparent text-[13px] md:text-base font-sf"
         >
           View all
           <ArrowRight className="size-4 md:size-5" />

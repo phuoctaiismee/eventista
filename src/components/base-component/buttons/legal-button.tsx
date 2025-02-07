@@ -34,7 +34,7 @@ export const LegalButton: FC<LegalButtonProps> = ({
       <Button
         className={cn(
           STYLES.disableFocusVisible,
-          "rounded-full h-[28px] w-[63px] relative overflow-hidden box-border bg-gradient-to-r from-[#7b6e5d] to-[#7c6635] before:absolute before:rounded-full before:w-[calc(100%-2px)] before:h-[calc(100%-2px)] before:left-[1px] before:top-[1px] before:z-[2] before:bg-gradient-to-r before:from-[#E6CAA4]/50 before:to-[#E9B84E]/50 px-4",
+          "rounded-full h-[28px] w-[63px] relative overflow-hidden box-border bg-gradient-to-r from-[#7b6e5d] to-[#7c6635] before:absolute before:rounded-full before:w-[calc(100%-2px)] before:h-[calc(100%-2px)] before:left-[1px] before:top-[1px] before:z-[2] before:bg-gradient-to-r before:from-[rgba(230, 202, 164, 1)] before:to-[rgba(233, 184, 78, 1)] px-4",
           className
         )}
       >

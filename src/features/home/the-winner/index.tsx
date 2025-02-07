@@ -4,7 +4,7 @@ import { Image } from "@/components/common/images";
 
 const TheWinner = () => {
   return (
-    <Bounded className="h-[375px] md:min-h-[750px] md:h-screen py-0 md:py-16 relative flex items-center justify-center">
+    <Bounded className="h-[375px] md:min-h-[750px] md:h-screen py-0 md:py-16 relative flex items-center justify-center font-unbounded">
       <div className="absolute inset-x-0 top-0 z-10 h-[43px] md:h-[250px] bg-gradient-to-b from-[#030815] to-[#03081500]/0" />
       <div className="z-10 absolute inset-x-0 top-5 md:top-12 flex items-center justify-center">
         <p className="bg-gradient-to-r from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent text-[13px] md:text-lg font-semibold uppercase text-center">
@@ -21,8 +21,8 @@ const TheWinner = () => {
         />
       </div>
       <div className="z-[11] absolute inset-x-0 bottom-4 md:bottom-6 flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-base md:text-5xl font-bold text-center text-white uppercase leading-[22px] md:leading-[67.2px]">
+        <div className="flex flex-col items-center justify-center ">
+          <h1 className="text-base md:text-5xl font-bold text-center text-white uppercase leading-[22px] md:leading-[67.2px] ">
             The King of the <br />{" "}
             <span className="bg-gradient-to-r from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent">
               Mister Tourism World

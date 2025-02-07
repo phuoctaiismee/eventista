@@ -5,7 +5,7 @@ import { ICategory } from "./type";
 export const CategoryAPI = createApi({
   reducerPath: "categoryAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${API_URL}/api`,
+    baseUrl: `http://localhost:3000/api`,
     prepareHeaders: (headers, { getState }) => {
       return headers;
     },

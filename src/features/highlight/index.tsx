@@ -17,10 +17,10 @@ export const Highlight = () => {
 
       <Bounded className="z-10">
         <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <div className="text-white text-sm md:text-2xl font-semibold uppercase">
+          <div className="text-white text-sm md:text-2xl font-medium uppercase font-unbounded">
             highlight
           </div>
-          <div className="text-white text-base md:text-5xl leading-6 font-semibold uppercase md:leading-[62px] ">
+          <div className="text-white text-base md:text-5xl leading-6 font-semibold uppercase md:leading-[62px] font-unbounded">
             press <span className="text-[#02D4FD]">mister tourism world</span> <br /> {" "}
             release
           </div>

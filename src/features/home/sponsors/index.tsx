@@ -823,14 +823,14 @@ export const Sponsors = () => {
               text="Sponsors"
               className="text-5xl font-semibold uppercase"
             /> */}
-            <div className="bg-gradient-to-b from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl font-semibold uppercase">
+            <div className="bg-gradient-to-b from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl font-semibold uppercase font-unbounded">
               Sponsors
             </div>
             <div className="max-w-[780px] text-center mt-6">
-              <div className="text-black font-semibold text-xl md:text-2xl uppercase mb-1">
+              <div className="text-black font-semibold text-xl md:text-2xl uppercase mb-1 font-unbounded">
                 Stronger together
               </div>
-              <div className="text-black font-normal text-lg lg:text-2xl uppercase">
+              <div className="text-black font-light text-lg lg:text-2xl uppercase font-unbounded">
                 Thanks to our sponsors for supporting the activities of the 2024
                 Mister Tourism World
               </div>

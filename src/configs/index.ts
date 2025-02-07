@@ -31,7 +31,7 @@ export const COMMON = {
     },
     {
       name: "News",
-      url: "#",
+      url: "/news",
     },
     {
       name: "Gallery",

@@ -40,7 +40,7 @@ const BottomNavigation = () => {
   const pathname = usePathname();
   return (
     <div className="block md:hidden">
-      <div className="fixed inset-x-0 bottom-0 bg-[#020719] backdrop-blur-lg z-[9999]">
+      <div className="fixed inset-x-0 bottom-0 bg-white bg-opacity-5 backdrop-blur-lg z-[9999]">
         <div className="pt-3 pb-6 px-6 flex items-center justify-between">
           {menu.map((item) => {
             const isActive = pathname === item?.href;

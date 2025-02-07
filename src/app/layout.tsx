@@ -9,6 +9,10 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mister-tourism-world.vercel.app/"),
@@ -119,7 +123,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sf ${montserrat.variable} antialiased`}>
+      <body
+        className={`font-sf ${montserrat.variable} ${unbounded.variable} antialiased`}
+      >
         <GlobalRootLayout>{children}</GlobalRootLayout>
       </body>
     </html>

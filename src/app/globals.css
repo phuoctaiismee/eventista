@@ -73,6 +73,42 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-[#E6CAA4] to-[#E9B84E] bg-clip-text text-transparent;
+  }
+}
+
+@plugin 'tailwind-scrollbar' {
+    nocompatible: true;
+    preferredStrategy: 'pseudoelements';
+}
+
+.gradient-border-mask {
+  display: block;
+  position: relative;
+  padding: 2rem;
+  border-radius: 1000px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
+  color: white;
+}
+
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1000px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      140deg,
+      rgba(230, 202, 164, 1),
+      rgba(233, 184, 78, 1)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 /*
