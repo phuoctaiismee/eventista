@@ -9,6 +9,7 @@ import MoreBlog from "./more-blog";
 
 const MainContainer = ({ slug }: { slug: string }) => {
   const { data, isLoading } = useGetNewsBySlugQuery({ slug });
+  console.log("🚀 ~ MainContainer ~ data:", data)
   const { data: news } = useNewsActions();
   return (
     <div className="grid grid-cols-12 gap-4 w-full z-10 lg:py-8 lg:px-[120px]">
@@ -27,7 +28,7 @@ const MainContainer = ({ slug }: { slug: string }) => {
           <h2 className="text-xl text-white uppercase font-unbounded">
             may be interested
           </h2>
-          <ListNewCard news={news?.result || []} />
+          <ListNewCard news={news?.posts || []} />
         </div>
       </div>
       <div className="col-span-12">

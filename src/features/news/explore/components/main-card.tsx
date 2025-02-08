@@ -27,8 +27,8 @@ const MainCard = ({ blog }: { blog?: Post }) => {
                 News - {format(blog?.created_at ?? new Date(), "PPP")}
               </p>
             </div>
-            <p className="text-xs font-montserrat font-normal text-white">
-              {blog?.title ?? ""}
+            <p className="text-xs font-montserrat font-normal text-white  line-clamp-2">
+              {blog?.excerpt ?? ""}
             </p>
             <Button
               title="Read More"

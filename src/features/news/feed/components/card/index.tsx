@@ -22,7 +22,7 @@ const CardNewFeed = ({ item }: CardNewFeedProps) => {
         <p className="text-white text-xs font-montserrat font-light">
           {item?.created_at}
         </p>
-        <h4 className="text-white text-base font-montserrat font-semibold">
+        <h4 className="text-white text-base font-montserrat font-semibold line-clamp-2">
           {item?.title}
         </h4>
       </div>

@@ -1,4 +1,4 @@
-import { API_URL } from "@/configs";
+import { API_URL, CONTENT_KEY } from "@/configs";
 import NewDetails from "@/features/new-details";
 import { IResponse } from "@/stores";
 import {
@@ -20,15 +20,20 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
 
-  const article: IPostDetailResponse = await fetch(`${API_URL}/ghost/${slug}`)
+  const article = await fetch(
+    `${API_URL}/ghost/api/content/posts/slug/${slug}?key=${CONTENT_KEY}`
+  )
     .then((res) => res.json())
-    .then((res) => res.data);
+    .then((res: { posts: Post[] }) => res.posts[0]);
+
+
 
   if (!article) {
     notFound();
   }
 
-  const articleTitle = article?.data?.data?.title;
+  const articleTitle = article?.title;
+
 
   const { title, description, openGraph } = await parent;
 
@@ -61,10 +66,12 @@ export async function generateMetadata(
 
 export async function generateStaticParams() {
   try {
-    const response = await fetch(`${API_URL}/ghost`);
-    const json = await response.json();
+    const response = await fetch(
+      `${API_URL}/ghost/api/content/posts/?key=${CONTENT_KEY}`
+    );
+    const json: IPostsResponse = await response.json();
 
-    const articles = json?.data?.data?.result;
+    const articles = json?.posts;
 
     if (!Array.isArray(articles)) {
       console.error("API response is not an array:", articles);

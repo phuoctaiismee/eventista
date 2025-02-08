@@ -31,7 +31,7 @@ const NewCard = ({ blog }: NewCardProps) => {
             </p>
           </div>
           <p className="text-xs font-montserrat font-normal text-white line-clamp-3">
-            {blog?.title ?? ""}
+            {blog?.excerpt ?? ""}
           </p>
         </div>
       </div>

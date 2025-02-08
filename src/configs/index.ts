@@ -1,5 +1,8 @@
 export const API_URL: string =
   process.env.NEXT_PUBLIC_API_URL || "localhost:3000";
+export const CONTENT_KEY: string =
+  process.env.NEXT_PUBLIC_CONTENT_KEY || "ace301e57ca413d697aa531db2";
+
 
 export const STYLES = {
   disableFocusVisible:

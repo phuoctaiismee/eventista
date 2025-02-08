@@ -12,7 +12,7 @@ export const useNewsActions = () => {
 
   const { data, isLoading, isFetching, isError } = useGetListNewsQuery(pagination);
 
-  const totalPages = data?.total_pages ?? 1;
+  const totalPages = data?.meta?.pagination?.pages ?? 1;
   const isLastPage = pagination.page >= totalPages;
   const isFirstPage = pagination.page <= 1;
 

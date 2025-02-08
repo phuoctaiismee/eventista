@@ -6,11 +6,10 @@ import { useGetListNewsQuery } from "@/stores/features/news";
 
 const ExploreSection = () => {
   const { data, isLoading, isError } = useGetListNewsQuery({});
-  const mainNews = useMemo(() => data?.result[0], [data]);
-  const news = useMemo(
-    () => data?.result.slice(1, data?.result.length),
-    [data]
-  );
+
+  const mainNews = useMemo(() => data?.posts[0], [data]);
+  const news = useMemo(() => data?.posts.slice(1, data?.posts.length), [data]);
+
   //   const news = [
   //     {
   //       title: "Mister tourism world press release",
@@ -67,7 +66,7 @@ const ExploreSection = () => {
         </h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 min-h-[350px]">
           <MainCard blog={mainNews} />
         </div>
         <div className="hidden md:block lg:col-span-5">

@@ -9,7 +9,7 @@ const NewsFeatues = () => {
     <div className="flex flex-col">
       <HeroSection />
       <ExploreSection />
-      <div className="grid grid-cols-12 w-full z-10 divide-x divide-neutral-50/[16%] lg:py-8 lg:px-[120px]">
+      <div className="grid grid-cols-12 w-full z-10 divide-x divide-neutral-50/[16%] lg:py-8 px-4 lg:px-[120px]">
         <div className="md:col-span-8 col-span-12 divide-y divide-neutral-50/[16%]">
           <div className="p-0 md:p-4 lg:p-6">
             <NewFeedFeature />

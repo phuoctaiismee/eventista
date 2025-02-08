@@ -18,12 +18,12 @@ const CardFeed = ({ item }: CardFeedProps) => {
         <Image
           src={item?.feature_image ?? undefined}
           alt={item?.title ?? ""}
-          className="h-[158px]  rounded-xl overflow-hidden"
+          className="h-[158px] lg:h-full  rounded-xl overflow-hidden"
         />
       </div>
       <div className="flex flex-col gap-4 col-span-8">
         <div className="flex flex-col gap-2">
-          <h4 className="text-white text-base font-montserrat font-semibold">
+          <h4 className="text-white text-base font-montserrat font-semibold line-clamp-1">
             {item.title}
           </h4>
           <p className="text-white text-xs font-montserrat font-light">
@@ -31,10 +31,11 @@ const CardFeed = ({ item }: CardFeedProps) => {
           </p>
         </div>
         <p className="text-white text-xs font-montserrat font-light line-clamp-3">
-          {item.title}
+          {item.excerpt}
         </p>
         <Button
           variant="ghost"
+
           size="sm"
           className="rounded-full h-7 border w-fit border-white text-white text-xs"
         >

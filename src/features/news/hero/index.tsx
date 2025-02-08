@@ -2,7 +2,7 @@ import { Image } from "@/components/common/images";
 
 const HeroSection = () => {
   return (
-    <section className="py-5 md:py-0 lg:h-[750px] relative">
+    <section className="py-5 md:py-0 lg:h-[750px] w-full relative">
       <Image
         src="/images/home/hero.png"
         className="w-full h-full"

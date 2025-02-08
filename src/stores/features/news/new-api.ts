@@ -1,37 +1,47 @@
-import { API_URL } from "@/configs";
+import { API_URL, CONTENT_KEY } from "@/configs";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import {  IPostDetailResponse, IPostsResponse, Post, PostResponse } from "./type";
+import {
+  IPostDetailResponse,
+  IPostsResponse,
+  Post,
+  PostResponse,
+} from "./type";
 
 export const NewsAPI = createApi({
   reducerPath: "newsAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${API_URL}`,
+    baseUrl: `${API_URL}/ghost/api/content`,
     prepareHeaders: (headers, { getState }) => {
       return headers;
     },
   }),
+
   endpoints: (build) => ({
     // GET LIST
-    getListNews: build.query<PostResponse, {
+    getListNews: build.query<
+      IPostsResponse,
+      {
         page?: number;
         limit?: number;
-    }>({
+      }
+    >({
       query: (payload) => {
         return {
-          url: `/ghost`,
+          url: `/posts/?key=${CONTENT_KEY}`,
           method: "GET",
           params: payload,
         };
       },
-      transformResponse: (response: IPostsResponse) => response.data.data,
+      transformResponse: (response: IPostsResponse) => response,
     }),
     // GET BY ID
+
     getNewsBySlug: build.query<Post, { slug: string }>({
       query: ({ slug }) => ({
-        url: `/ghost/${slug}`,
+        url: `/posts/slug/${slug}/?key=${CONTENT_KEY}`,
         method: "GET",
       }),
-      transformResponse: (response: IPostDetailResponse) => response.data.data,
+      transformResponse: (response: IPostDetailResponse) => response.posts[0],
     }),
   }),
 });

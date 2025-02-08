@@ -88,7 +88,7 @@ const PreviousNews = () => {
           </>
         ) : (
           <>
-            {data?.result?.map((item, index) => (
+            {data?.posts?.map((item, index) => (
               //   <GradientOutline key={index}  className="w-full">
               <CardFeed key={index} item={item} />
               //   </GradientOutline>

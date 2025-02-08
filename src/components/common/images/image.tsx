@@ -30,15 +30,16 @@ const Image: React.FC<ImageProps> = ({
   return (
     <div className={cn('relative overflow-hidden', className)}>
       {hasError ? (
-        <div className="flex h-full w-full items-center justify-center rounded border border-neutral-100 dark:border-neutral-800">
+        <div className="flex h-full w-full items-center justify-center rounded border border-[#05112C]/80">
           {fallback || (
-            <div className="flex h-full w-full flex-1 items-center justify-center bg-neutral-100 dark:bg-neutral-700">
+            <div className="flex h-full w-full flex-1 items-center justify-center bg-[#05112C]">
               <svg
-                className="h-32 w-32 text-white dark:text-neutral-400"
+                className="h-32 w-32 text-slate-500"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
                 height="1em"
                 viewBox="0 0 24 24"
+
               >
                 <g
                   fill="none"

@@ -27,6 +27,7 @@ export interface Post {
   total_reactions: number;
   is_reactions: boolean;
   comments: Comment[];
+  excerpt: string;
 }
 
 export interface Authors {
@@ -73,6 +74,24 @@ export interface PostResponse {
   current_page: number;
 }
 
-export interface IPostsResponse extends IResponse<PostResponse> {}
+// export interface IPostsResponse extends IResponse<PostResponse> {}
 
-export interface IPostDetailResponse extends IResponse<Post> {}
+// export interface IPostDetailResponse extends IResponse<Post> {}
+
+export interface IPostsResponse {
+  posts: Post[];
+  meta: {
+    pagination: {
+      page: number;
+      limit: number;
+      pages: number;
+      total: number;
+      next: number;
+      prev: number;
+    };
+  };
+}
+
+export interface IPostDetailResponse {
+  posts: Post[];
+}

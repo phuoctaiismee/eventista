@@ -21,7 +21,7 @@ export const NewsSlice = createSlice({
     builder.addMatcher(
       endpoints.getListNews.matchFulfilled,
       (state, action) => {
-        const posts = action.payload.result;
+        const posts = action.payload.posts;
 
         state.posts = posts.map((item) => ({
           ...item,
